@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
+  position: relative;
   width: 274px;
   display: flex;
   flex-direction: column;
@@ -85,5 +86,25 @@ export const Button = styled.button`
 
   :hover {
     background-color: var(--dark-blue);
+  }
+`;
+
+export const FavoriteButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 16px;
+  right: 16px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  :hover {
+    transform: scale(1.3);
   }
 `;
