@@ -1,4 +1,5 @@
 import { nanoid } from "@reduxjs/toolkit";
+import { useEffect } from "react";
 import {
   Overlay,
   Modal,
@@ -12,15 +13,38 @@ import {
   Container,
   Description,
   SubTitle,
+  ConditionsList,
+  ConditionItem,
+  RentLink,
 } from "./AdvertModal.styled";
-import Cross from "assets/svg/cross.svg";
+import Cross from "assets/images/svg/cross.svg";
 
 export default function AdvertModal({ advert, onClose }) {
   const arrayOfConditions = advert.rentalConditions.split("\n");
-  console.log(arrayOfConditions);
+  // const minimumAge = arrayOfConditions[0].split(":");
+  // console.log(minimumAge);
+  const mileage = String(advert.mileage / 1000).replace(/\./g, ",");
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.code === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
+
+  const handleOverlayClick = (event) => {
+    if (event.currentTarget === event.target) {
+      onClose();
+    }
+  };
 
   return (
-    <Overlay>
+    <Overlay onClick={handleOverlayClick}>
       <Modal>
         <CloseButton type="button" onClick={onClose}>
           <img src={Cross} alt="close button" />
@@ -58,7 +82,19 @@ export default function AdvertModal({ advert, onClose }) {
           </div>
           <div>
             <SubTitle>Rental Conditions:</SubTitle>
+            <ConditionsList>
+              {arrayOfConditions.map((item) => {
+                return <ConditionItem key={nanoid()}>{item}</ConditionItem>;
+              })}
+              <ConditionItem>
+                Mileage:<Span>{mileage}</Span>
+              </ConditionItem>
+              <ConditionItem>
+                Price:<Span>{advert.rentalPrice}</Span>
+              </ConditionItem>
+            </ConditionsList>
           </div>
+          <RentLink href="tel:+380730000000">Rental car</RentLink>
         </Container>
       </Modal>
     </Overlay>
