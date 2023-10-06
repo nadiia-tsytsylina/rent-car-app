@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/test-task-go-it/static/css/main.d4e3d5f8.css",
-    "main.js": "/test-task-go-it/static/js/main.3a4a3441.js",
+    "main.css": "/test-task-go-it/static/css/main.0a69bcb1.css",
+    "main.js": "/test-task-go-it/static/js/main.80b87427.js",
+    "static/media/main-car-webP.webp": "/test-task-go-it/static/media/main-car-webP.6750ee876ac52f1545e1.webp",
     "static/media/Manrope-Regular.ttf": "/test-task-go-it/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
+    "static/media/heart-normal.svg": "/test-task-go-it/static/media/heart-normal.282d936f414f4c6884ab9306a91dad67.svg",
+    "static/media/heart-active.svg": "/test-task-go-it/static/media/heart-active.97847e9195943f61800c97807e735d4f.svg",
     "index.html": "/test-task-go-it/index.html",
     "static/media/cross.svg": "/test-task-go-it/static/media/cross.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
-    "main.d4e3d5f8.css.map": "/test-task-go-it/static/css/main.d4e3d5f8.css.map",
-    "main.3a4a3441.js.map": "/test-task-go-it/static/js/main.3a4a3441.js.map"
+    "main.0a69bcb1.css.map": "/test-task-go-it/static/css/main.0a69bcb1.css.map",
+    "main.80b87427.js.map": "/test-task-go-it/static/js/main.80b87427.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4e3d5f8.css",
-    "static/js/main.3a4a3441.js"
+    "static/css/main.0a69bcb1.css",
+    "static/js/main.80b87427.js"
   ]
 }
