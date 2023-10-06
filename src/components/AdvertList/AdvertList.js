@@ -1,13 +1,7 @@
-import { useSelector } from "react-redux";
-import { selectAdverts } from "redux/selectors";
-
 import Advert from "components/Advert/Advert";
-
 import { List } from "./AdvertList.styled";
 
-export default function AdvertList() {
-  const adverts = useSelector(selectAdverts);
-
+export default function AdvertList({ adverts }) {
   return (
     <List>
       {adverts.map((item) => (
