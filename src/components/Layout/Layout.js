@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-
 import { Navigation, StyledLink, Container } from "./Layout.styled";
 
 export default function Layout() {
