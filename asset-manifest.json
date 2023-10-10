@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/rent-car-app/static/css/main.4f8d62c4.css",
-    "main.js": "/rent-car-app/static/js/main.615fd67d.js",
+    "main.js": "/rent-car-app/static/js/main.9b878131.js",
     "static/media/main-car-webP.webp": "/rent-car-app/static/media/main-car-webP.6750ee876ac52f1545e1.webp",
     "static/media/Manrope-Regular.ttf": "/rent-car-app/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
+    "static/media/logo512.png": "/rent-car-app/static/media/logo512.ceb4f7e8a97a0eec2cab.png",
     "static/media/heart-normal.svg": "/rent-car-app/static/media/heart-normal.282d936f414f4c6884ab9306a91dad67.svg",
     "static/media/heart-active.svg": "/rent-car-app/static/media/heart-active.97847e9195943f61800c97807e735d4f.svg",
     "index.html": "/rent-car-app/index.html",
     "static/media/cross.svg": "/rent-car-app/static/media/cross.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
     "main.4f8d62c4.css.map": "/rent-car-app/static/css/main.4f8d62c4.css.map",
-    "main.615fd67d.js.map": "/rent-car-app/static/js/main.615fd67d.js.map"
+    "main.9b878131.js.map": "/rent-car-app/static/js/main.9b878131.js.map"
   },
   "entrypoints": [
     "static/css/main.4f8d62c4.css",
-    "static/js/main.615fd67d.js"
+    "static/js/main.9b878131.js"
   ]
 }
