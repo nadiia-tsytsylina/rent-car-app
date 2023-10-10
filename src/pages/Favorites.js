@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectFavorites } from "redux/selectors";
+
 import AdvertList from "components/AdvertList/AdvertList";
 import EmptyFavorites from "components/EmptyFavorites/EmptyFavorites";
 
