@@ -25,18 +25,6 @@ export const Modal = styled.div`
     width: 0;
     height: 0;
   }
-  /* &::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(18, 20, 23, 0.5); 
-    border-radius: 20px; 
-  } */
 `;
 
 export const CloseButton = styled.button`
@@ -85,6 +73,7 @@ export const Image = styled.img`
 export const InfoList = styled.ul`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 4px;
   width: 460px;
@@ -100,9 +89,6 @@ export const InfoItem = styled.li`
   &:last-child {
     border-right: none;
     padding: 0;
-    /* overflow: hidden;
-    white-space: wrap;
-    text-overflow: ellipsis; */
   }
 `;
 

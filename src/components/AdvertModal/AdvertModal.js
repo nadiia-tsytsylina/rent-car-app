@@ -1,5 +1,6 @@
 import { nanoid } from "@reduxjs/toolkit";
 import { useEffect } from "react";
+
 import {
   Overlay,
   Modal,
@@ -21,8 +22,9 @@ import Cross from "assets/images/svg/cross.svg";
 
 export default function AdvertModal({ advert, onClose }) {
   const arrayOfConditions = advert.rentalConditions.split("\n");
-  // const minimumAge = arrayOfConditions[0].split(":");
-  // console.log(minimumAge);
+  console.log(arrayOfConditions.slice(1));
+  const minimumAge = arrayOfConditions[0].split(":")[1];
+
   const mileage = String(advert.mileage / 1000).replace(/\./g, ",");
 
   useEffect(() => {
@@ -83,7 +85,10 @@ export default function AdvertModal({ advert, onClose }) {
           <div>
             <SubTitle>Rental Conditions:</SubTitle>
             <ConditionsList>
-              {arrayOfConditions.map((item) => {
+              <ConditionItem>
+                Minimum age:<Span>{minimumAge}</Span>
+              </ConditionItem>
+              {arrayOfConditions.slice(1).map((item) => {
                 return <ConditionItem key={nanoid()}>{item}</ConditionItem>;
               })}
               <ConditionItem>

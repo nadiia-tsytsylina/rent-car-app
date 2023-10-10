@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { addFavorites, deleteFavorites } from "redux/favoriteSlice";
 import { selectFavorites } from "redux/selectors";
+
 import AdvertModal from "components/AdvertModal/AdvertModal";
 import {
   Container,

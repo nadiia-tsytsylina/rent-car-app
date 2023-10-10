@@ -34,7 +34,7 @@ export const StyledLink = styled(NavLink)`
 `;
 
 export const Container = styled.div`
-  padding: 40px 24px;
+  padding: 40px 24px 150px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
