@@ -9,7 +9,7 @@ export const Navigation = styled.nav`
   border-radius: 12px;
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 100px;
   align-items: center;
   background: var(--light-background);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
