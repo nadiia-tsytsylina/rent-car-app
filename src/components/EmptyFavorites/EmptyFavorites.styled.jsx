@@ -7,6 +7,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 24px;
+
+  @media (min-width: 834px) {
+    gap: 40px;
+  }
 `;
 
 export const Text = styled.h2`
@@ -15,6 +19,14 @@ export const Text = styled.h2`
   line-height: 1.5;
   font-weight: 500;
   text-align: center;
+
+  @media (min-width: 834px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 24px;
+  }
 `;
 
 export const Image = styled.img`
@@ -23,11 +35,7 @@ export const Image = styled.img`
 
 export const StyledLink = styled(Link)`
   color: var(--accent-color);
-  font-size: 18px;
   line-height: 1.5;
   font-weight: 600;
-  text-align: center;
-  margin-bottom: 24px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: underline;
 `;

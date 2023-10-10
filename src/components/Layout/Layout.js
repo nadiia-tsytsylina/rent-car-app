@@ -1,4 +1,6 @@
 import { Outlet } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Navigation, StyledLink, Container } from "./Layout.styled";
 
 export default function Layout() {
@@ -12,6 +14,7 @@ export default function Layout() {
       <Container>
         <Outlet />
       </Container>
+      <ToastContainer />;
     </>
   );
 }

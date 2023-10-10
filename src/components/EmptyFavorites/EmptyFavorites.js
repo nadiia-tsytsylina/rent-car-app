@@ -8,7 +8,7 @@ export default function EmptyFavorites() {
       <Image src={Logo} alt="Logo" />
 
       <Text>
-        You can add some cars in favorites in{" "}
+        You can add some cars to favorites in{" "}
         <StyledLink to="/catalog">Catalog</StyledLink>
       </Text>
     </Container>

@@ -7,9 +7,16 @@ export const FilterContainer = styled.div`
 
 export const StyledForm = styled(Form)`
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 18px;
+  flex-direction: column;
+  gap: 14px;
+
+  @media (min-width: 834px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 18px;
+  }
 `;
 
 export const SelectContainer = styled.div`
@@ -31,13 +38,17 @@ export const StyledSelect = styled(Field)`
   font-weight: 500;
   font-family: Manrope;
   color: var(--dark-text);
-  width: 224px;
+  width: 100%;
   height: 48px;
   padding-left: 14px;
   border: none;
   background-color: var(--light-background);
   border-radius: 14px;
   outline: none;
+
+  @media (min-width: 834px) {
+    width: 224px;
+  }
 `;
 
 export const StyledOption = styled.option`

@@ -8,23 +8,51 @@ export const Container = styled.div`
 export const Title = styled.h1`
   color: var(--dark-text);
   font-weight: 600;
-  font-size: 36px;
+  font-size: 28px;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+
+  @media (min-width: 834px) {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const SubTitle = styled.h2`
   color: var(--accent-color);
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
+
+  @media (min-width: 834px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 24px;
+  }
 `;
 
 export const SubContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  flex-direction: column-reverse;
+  padding: 20px 0;
+
+  @media (min-width: 834px) {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 120px;
+  }
 `;
 
 export const List = styled.ul`
@@ -38,11 +66,19 @@ export const Item = styled.li`
   display: flex;
   align-items: center;
   color: var(--dark-text);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
   gap: 4px;
+
+  @media (min-width: 834px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 20px;
+  }
 `;
 
 export const RentLink = styled.a`
@@ -67,5 +103,13 @@ export const RentLink = styled.a`
 `;
 
 export const Image = styled.img`
-  width: 600px;
+  width: 400px;
+
+  @media (min-width: 834px) {
+    width: 500px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 800px;
+  }
 `;

@@ -1,5 +1,6 @@
 import { nanoid } from "@reduxjs/toolkit";
 import { Formik } from "formik";
+import { toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
 import { selectAllAdverts } from "redux/selectors";
 import { updateFilter } from "redux/filterSlice";
@@ -30,15 +31,7 @@ export default function Filter() {
 
   const handleSubmit = ({ brand, price, minMileage, maxMileage }, actions) => {
     if (minMileage && maxMileage && minMileage >= maxMileage) {
-      console.log("Minimal mileage can't be bigger than maximal mileage");
-      return;
-    } else if (
-      brand === "" &&
-      price === "" &&
-      minMileage === "" &&
-      maxMileage === ""
-    ) {
-      console.log("Please enter something");
+      toast.error("Minimal mileage can't be bigger than maximal mileage");
       return;
     }
     dispatch(updateFilter({ brand, price, minMileage, maxMileage }));
@@ -81,7 +74,6 @@ export default function Filter() {
               id="price"
               placeholder="To a $"
               required
-              style={{ width: 125 }}
             >
               <StyledOption disabled hidden value=""></StyledOption>
               {priceList.map((item) => (
