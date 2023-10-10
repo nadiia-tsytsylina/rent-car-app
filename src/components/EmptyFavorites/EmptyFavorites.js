@@ -1,9 +1,16 @@
-import { Text } from "./EmptyFavorites.styled";
+import { Container, Text, Image, StyledLink } from "./EmptyFavorites.styled";
+import Logo from "assets/images/logo512.png";
 
 export default function EmptyFavorites() {
   return (
-    <>
-      <Text>You don't have any favorites yet</Text>
-    </>
+    <Container>
+      <Text>Your favorites will be displayed here</Text>
+      <Image src={Logo} alt="Logo" />
+
+      <Text>
+        You can add some cars in favorites in{" "}
+        <StyledLink to="/catalog">Catalog</StyledLink>
+      </Text>
+    </Container>
   );
 }
