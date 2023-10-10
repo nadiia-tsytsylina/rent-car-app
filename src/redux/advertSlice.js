@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAdverts } from "./operations";
+import { fetchAdverts, fetchAdvertsByPage } from "./operations";
 
 const handlePending = (state) => {
   state.isLoading = true;
@@ -14,17 +14,31 @@ const advertsSlice = createSlice({
   name: "adverts",
   initialState: {
     items: [],
+    allItems: [],
     isLoading: false,
     error: null,
   },
-  extraReducers: {
-    [fetchAdverts.pending]: handlePending,
-    [fetchAdverts.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.items = action.payload;
-    },
-    [fetchAdverts.rejected]: handleRejected,
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchAdverts.pending, handlePending)
+      .addCase(fetchAdverts.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.allItems = action.payload;
+      })
+      .addCase(fetchAdverts.rejected, handleRejected)
+      .addCase(fetchAdvertsByPage.pending, handlePending)
+      .addCase(fetchAdvertsByPage.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+
+        if (action.meta.arg === 1) {
+          state.items = action.payload;
+        } else {
+          state.items.push(...action.payload);
+        }
+      })
+      .addCase(fetchAdvertsByPage.rejected, handleRejected);
   },
 });
 
