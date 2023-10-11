@@ -65,7 +65,7 @@ export const StyledInput = styled(Field)`
   font-weight: 500;
   font-family: Manrope;
   color: var(--dark-text);
-  width: 160px;
+  width: 50%;
   height: 48px;
   padding-left: 14px;
   border: none;
@@ -76,6 +76,10 @@ export const StyledInput = styled(Field)`
 
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
+  }
+
+  @media (min-width: 834px) {
+    width: 160px;
   }
 `;
 

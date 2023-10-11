@@ -30,7 +30,11 @@ export const Text = styled.h2`
 `;
 
 export const Image = styled.img`
-  width: 240px;
+  width: 180px;
+
+  @media (min-width: 834px) {
+    width: 240px;
+  }
 `;
 
 export const StyledLink = styled(Link)`
