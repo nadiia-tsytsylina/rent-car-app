@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rent-car-app/static/css/main.cd317610.css",
-    "main.js": "/rent-car-app/static/js/main.896970bd.js",
+    "main.js": "/rent-car-app/static/js/main.b8b6600e.js",
     "static/media/main-car-webP.webp": "/rent-car-app/static/media/main-car-webP.6750ee876ac52f1545e1.webp",
     "static/media/Manrope-Regular.ttf": "/rent-car-app/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
     "static/media/logo512.png": "/rent-car-app/static/media/logo512.ceb4f7e8a97a0eec2cab.png",
@@ -10,10 +10,10 @@
     "index.html": "/rent-car-app/index.html",
     "static/media/cross.svg": "/rent-car-app/static/media/cross.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
     "main.cd317610.css.map": "/rent-car-app/static/css/main.cd317610.css.map",
-    "main.896970bd.js.map": "/rent-car-app/static/js/main.896970bd.js.map"
+    "main.b8b6600e.js.map": "/rent-car-app/static/js/main.b8b6600e.js.map"
   },
   "entrypoints": [
     "static/css/main.cd317610.css",
-    "static/js/main.896970bd.js"
+    "static/js/main.b8b6600e.js"
   ]
 }
