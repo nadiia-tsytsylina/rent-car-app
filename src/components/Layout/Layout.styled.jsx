@@ -16,10 +16,6 @@ export const Navigation = styled.nav`
   @media (min-width: 834px) {
     gap: 100px;
   }
-
-  @media (min-width: 1440px) {
-    max-width: 1440px;
-  }
 `;
 
 export const StyledLink = styled(NavLink)`
