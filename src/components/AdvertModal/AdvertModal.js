@@ -1,4 +1,3 @@
-import { nanoid } from "@reduxjs/toolkit";
 import { useEffect } from "react";
 
 import {
@@ -73,12 +72,12 @@ export default function AdvertModal({ advert, onClose }) {
             <SubTitle>Accessories and functionalities:</SubTitle>
             <InfoList>
               {advert.accessories.map((item) => {
-                return <InfoItem key={nanoid()}>{item}</InfoItem>;
+                return <InfoItem key={item}>{item}</InfoItem>;
               })}
             </InfoList>
             <InfoList style={{ marginBottom: 0 }}>
               {advert.functionalities.map((item) => {
-                return <InfoItem key={nanoid()}>{item}</InfoItem>;
+                return <InfoItem key={item}>{item}</InfoItem>;
               })}
             </InfoList>
           </div>
@@ -89,7 +88,7 @@ export default function AdvertModal({ advert, onClose }) {
                 Minimum age:<Span>{minimumAge}</Span>
               </ConditionItem>
               {arrayOfConditions.slice(1).map((item) => {
-                return <ConditionItem key={nanoid()}>{item}</ConditionItem>;
+                return <ConditionItem key={item}>{item}</ConditionItem>;
               })}
               <ConditionItem>
                 Mileage:<Span>{mileage}</Span>

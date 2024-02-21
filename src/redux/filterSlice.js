@@ -9,18 +9,18 @@ const filterSlice = createSlice({
       min: null,
       max: null,
     },
-    isFiltred: false,
+    isFiltered: false,
   },
   reducers: {
     updateFilter(state, { payload }) {
-      state.isFiltred = true;
+      state.isFiltered = true;
       state.brand = payload.brand;
       state.price = payload.price;
       state.mileage.min = payload.minMileage;
       state.mileage.max = payload.maxMileage;
     },
     resetFilter(state) {
-      state.isFiltred = false;
+      state.isFiltered = false;
       state.filterBrand = "";
       state.filterPrice = "";
       state.mileage.min = "";
@@ -29,5 +29,6 @@ const filterSlice = createSlice({
   },
 });
 
-export const { updateFilter, resetFilter } = filterSlice.actions;
+export const { updateFilter, updateFilterBrand, resetFilter } =
+  filterSlice.actions;
 export const filterReducer = filterSlice.reducer;

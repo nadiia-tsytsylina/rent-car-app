@@ -5,8 +5,8 @@ import { fetchAdverts, fetchAdvertsByPage } from "redux/operations";
 import {
   selectAllAdverts,
   selectAdvertsByPage,
-  selectIsFiltred,
-  selectFiltredAdverts,
+  selectIsFiltered,
+  selectFilteredAdverts,
 } from "redux/selectors";
 import { resetFilter } from "redux/filterSlice";
 
@@ -19,8 +19,8 @@ export default function Catalog() {
   const allAdverts = useSelector(selectAllAdverts);
   const adverts = useSelector(selectAdvertsByPage);
   const [page, setPage] = useState(1);
-  const isFiltred = useSelector(selectIsFiltred);
-  const filtredAdverts = useSelector(selectFiltredAdverts);
+  const isFiltered = useSelector(selectIsFiltered);
+  const filteredAdverts = useSelector(selectFilteredAdverts);
   const [isButtonShown, setIsButtonShown] = useState(true);
 
   useEffect(() => {
@@ -47,17 +47,17 @@ export default function Catalog() {
   return (
     <>
       <Filter />
-      {!isFiltred && adverts.length > 0 && (
+      {!isFiltered && adverts.length > 0 && (
         <AdvertList
           adverts={adverts}
           onLoadMore={handleLoadMore}
           isButtonShown={isButtonShown}
         />
       )}
-      {isFiltred && filtredAdverts.length > 0 && (
-        <AdvertList adverts={filtredAdverts} onLoadMore={handleLoadMore} />
+      {isFiltered && filteredAdverts.length > 0 && (
+        <AdvertList adverts={filteredAdverts} onLoadMore={handleLoadMore} />
       )}
-      {isFiltred && filtredAdverts.length === 0 && <EmptyFilter />}
+      {isFiltered && filteredAdverts.length === 0 && <EmptyFilter />}
     </>
   );
 }

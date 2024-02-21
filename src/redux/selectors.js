@@ -7,17 +7,17 @@ export const selectError = (state) => state.adverts.error;
 
 export const selectFavorites = (state) => state.favorites.items;
 
-export const selectIsFiltred = (state) => state.filter.isFiltred;
-export const selectFiltredBrand = (state) => state.filter.brand;
-export const selectFiltredPrice = (state) => state.filter.price;
-export const selectFiltredMileage = (state) => state.filter.mileage;
+export const selectIsFiltered = (state) => state.filter.isFiltered;
+export const selectFilteredBrand = (state) => state.filter.brand;
+export const selectFilteredPrice = (state) => state.filter.price;
+export const selectFilteredMileage = (state) => state.filter.mileage;
 
-export const selectFiltredAdverts = createSelector(
+export const selectFilteredAdverts = createSelector(
   [
     selectAllAdverts,
-    selectFiltredBrand,
-    selectFiltredPrice,
-    selectFiltredMileage,
+    selectFilteredBrand,
+    selectFilteredPrice,
+    selectFilteredMileage,
   ],
   (adverts, brand, price, mileage) => {
     return adverts
